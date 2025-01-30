@@ -1,3 +1,13 @@
+terraform {
+  backend "http" {
+    address = "https://app.harness.io/gateway/iacm/api/orgs/default/projects/default_project/workspaces/demo/terraform-backend?accountIdentifier=vRxzqLNjTNCgHiPiRGId-A"
+    username = "harness"
+    lock_address = "https://app.harness.io/gateway/iacm/api/orgs/default/projects/default_project/workspaces/demo/terraform-backend/lock?accountIdentifier=vRxzqLNjTNCgHiPiRGId-A"
+    lock_method = "POST"
+    unlock_address = "https://app.harness.io/gateway/iacm/api/orgs/default/projects/default_project/workspaces/demo/terraform-backend/lock?accountIdentifier=vRxzqLNjTNCgHiPiRGId-A"
+    unlock_method = "DELETE"
+  }
+}
 resource "google_storage_bucket" "my_bucket" {
   name     = "my-unique-bucket-name"
   location = "US"
