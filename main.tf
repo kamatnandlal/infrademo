@@ -1,6 +1,9 @@
-provider "harness" {
-  TF_HTTP_PASSWORD = "pat.vRxzqLNjTNCgHiPiRGId-A.679bc6dd31ea3d0a39867c66.exZN5Rmfaz5FDTumpOHF"
+provider "google" {
+  project = "fifth-handbook-447205-s2"          
+  region  = "us-central1"               
+  zone    = "us-central1-a"  
 }
+
 terraform {
   backend "http" {
     address = "https://app.harness.io/gateway/iacm/api/orgs/default/projects/default_project/workspaces/demo/terraform-backend?accountIdentifier=vRxzqLNjTNCgHiPiRGId-A"
