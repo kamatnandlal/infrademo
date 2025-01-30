@@ -1,3 +1,11 @@
+terraform {
+  required_providers {
+    google = {
+      source = "hashicorp/google"
+      version = "6.18.1"
+    }
+  }
+}
 provider "google" {
   project = "fifth-handbook-447205-s2"          
   region  = "us-central1"               
