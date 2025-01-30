@@ -1,3 +1,6 @@
+provider "harness" {
+  export TF_HTTP_PASSWORD = "pat.vRxzqLNjTNCgHiPiRGId-A.679bc6dd31ea3d0a39867c66.exZN5Rmfaz5FDTumpOHF"
+}
 terraform {
   backend "http" {
     address = "https://app.harness.io/gateway/iacm/api/orgs/default/projects/default_project/workspaces/demo/terraform-backend?accountIdentifier=vRxzqLNjTNCgHiPiRGId-A"
